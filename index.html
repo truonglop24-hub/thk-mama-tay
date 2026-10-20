@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Chúc thk mama 20/10 💗</title>
+<style>
+*{box-sizing:border-box}
+body{
+ margin:0;min-height:100vh;overflow-x:hidden;
+ font-family:Arial,sans-serif;text-align:center;color:#a52d63;
+ background:linear-gradient(150deg,#fff0f6,#ffd9eb,#f4dfff);
+}
+main{max-width:440px;margin:auto;padding:28px 18px 50px}
+h1{font-size:28px;line-height:1.5}
+p{line-height:1.9}
+button{
+ border:0;border-radius:30px;padding:13px 22px;margin:8px;
+ background:#e94f91;color:white;font-size:15px;
+}
+.scene{perspective:900px;width:min(290px,85vw);height:190px;margin:55px auto 40px}
+.envelope{
+ position:relative;width:100%;height:100%;background:#ff9fc5;
+ border-radius:6px;box-shadow:0 12px 30px #bb608955;
+ transform-style:preserve-3d;cursor:pointer;
+}
+.flap{
+ position:absolute;inset:0;background:#ffc1d8;
+ clip-path:polygon(0 0,50% 58%,100% 0);
+ transform-origin:top;transition:transform 1.2s;z-index:4;
+}
+.pocket{
+ position:absolute;inset:0;background:#ffb4d0;
+ clip-path:polygon(0 100%,0 0,50% 58%,100% 0,100% 100%);
+ z-index:3;
+}
+.seal{
+ position:absolute;top:55px;left:calc(50% - 23px);
+ width:46px;height:46px;border-radius:50%;
+ display:grid;place-items:center;background:#e63f79;
+ color:white;font-size:25px;z-index:5;
+}
+.letter{
+ position:absolute;left:10px;right:10px;bottom:8px;
+ min-height:140px;padding:16px 10px;background:#fffafd;
+ border-radius:8px;font-size:14px;line-height:1.7;
+ transition:transform 1.2s;z-index:2;
+}
+.envelope.open .flap{transform:rotateX(180deg);z-index:1}
+.envelope.open .seal{opacity:0}
+.envelope.open .letter{transform:translateY(-115px);z-index:5}
+#content{display:none}
+#content.show{display:block}
+.card{
+ background:#ffffffb8;border-radius:22px;padding:22px 17px;
+ margin:22px 0;box-shadow:0 8px 25px #d76b9820;
+}
+.line{opacity:0;transform:translateY(18px);transition:1s;margin:17px 0}
+.line.show{opacity:1;transform:translateY(0)}
+.flower{
+ display:inline-block;font-size:30px;margin:5px;
+ opacity:0;transform:scale(.1) rotate(-35deg);
+ transition:opacity 1s,transform 1s;
+}
+.flower.bloom{opacity:1;transform:scale(1) rotate(0)}
+.heart{
+ position:fixed;bottom:-40px;pointer-events:none;
+ animation:floatUp 5s linear forwards;z-index:20;
+}
+@keyframes floatUp{
+ to{transform:translateY(-110vh) rotate(360deg);opacity:0}
+}
+h1{animation:glow 2s ease-in-out infinite alternate}
+@keyframes glow{
+ from{text-shadow:0 0 3px #ff91bf}
+ to{text-shadow:0 0 17px #ff5fa8}
+}
+</style>
+</head>
+<body>
+<main>
+<h1>💗 Chúc thk mama 💗</h1>
+<p>Một món quà nhỏ dành riêng cho mama 🌷</p>
+<p>Hôm nay có một điều dễ thương muốn gửi đến mama...</p>
+
+<div class="scene">
+ <div class="envelope" id="envelope" onclick="openLetter()">
+  <div class="flap"></div>
+  <div class="letter">
+   <strong>💌 Gửi mama</strong><br>
+   Có một lời chúc bí mật ở bên trong nè!
+  </div>
+  <div class="pocket"></div>
+  <div class="seal">♥</div>
+ </div>
+</div>
+
+<p id="hint">👆 Chạm vào phong bì để mở thư nha!</p>
+<button onclick="openLetter()">💌 Mở thư</button>
+<button onclick="toggleMusic()">🎵 Bật / tắt nhạc</button>
+
+<audio id="music" loop preload="none">
+ <source src="nhac.mp3" type="audio/mpeg">
+</audio>
+
+<div id="content">
+ <div class="card">
+  <h2 class="line">🌸 Chúc thk mama 20/10 🌸</h2>
+  <p class="line">Hê lu mamaaa 💗 Hôm nay là ngày 20/10 nên tui có chút lời chúc muốn gửi đến mama nè.</p>
+  <p class="line">Chúc mama luôn xinh đẹp, đáng yêu, lúc nào cũng vui vẻ và cười thật nhiều nhaaa 🥹💕</p>
+  <p class="line">Mong mọi chuyện tốt đẹp sẽ đến với mama. Những điều làm mama buồn thì mau chóng qua đi, còn niềm vui thì ở lại thật lâu nhé.</p>
+  <p class="line">Chúc mama học tập thật tốt, luôn tự tin và đạt được những điều mình mong muốn ✨</p>
+  <p class="line">Nếu có ngày nào mệt mỏi thì nhớ nghỉ ngơi, ăn uống đầy đủ và đừng suy nghĩ nhiều quá nha.</p>
+  <p class="line">Mong mỗi ngày của mama đều có lý do để mỉm cười, có người quan tâm và có thật nhiều điều dễ thương 💖</p>
+  <p class="line">Chúc thk mama có một ngày 20/10 thật vui, nhận được nhiều quà, nhiều lời chúc và luôn hạnh phúc nhaaa 🌷</p>
+  <h2 class="line">Happy Women's Day, mamaaa! 💗🎀</h2>
+ </div>
+
+ <div class="card">
+  <h2 class="line">🌷 Vườn hoa dành cho mama 🌷</h2>
+  <p class="line">Hoa sẽ nở từng bông một nha, đợi xíu nè...</p>
+  <div>
+   <span class="flower">🌷</span>
+   <span class="flower">🌸</span>
+   <span class="flower">🌹</span>
+   <span class="flower">🌼</span>
+   <span class="flower">💐</span>
+   <span class="flower">🌺</span>
+   <span class="flower">🌻</span>
+   <span class="flower">🪻</span>
+  </div>
+  <p class="line">Mỗi bông hoa là một lời chúc vui vẻ, may mắn, bình an và hạnh phúc 💕</p>
+ </div>
+
+ <div class="card">
+  <h2 class="line">💌 Một lời nhắn cuối</h2>
+  <p class="line">Mong rằng khi đọc đến đây, mama sẽ mỉm cười một chút. Vậy là món quà nhỏ này có ý nghĩa rồi đó 💗</p>
+  <h2 class="line">🎀 20/10 vui vẻ nha mama 🎀</h2>
+  <p class="line">Gửi thật nhiều hoa và những điều tốt đẹp đến mama 🌸💖</p>
+ </div>
+</div>
+
+<p style="font-size:12px">Made with love 💗 · 20.10</p>
+</main>
+
+<script>
+let opened=false;
+
+function openLetter(){
+ if(opened)return;
+ opened=true;
+ document.getElementById('envelope').classList.add('open');
+ document.getElementById('hint').textContent=
+  '💖 Thư đang mở ra, đợi một chút nha mama...';
+
+ setTimeout(()=>{
+  document.getElementById('content').classList.add('show');
+  document.getElementById('hint').textContent=
+   '🌸 Những lời chúc sẽ xuất hiện lần lượt nha!';
+  document.querySelectorAll('.line').forEach((el,i)=>{
+   setTimeout(()=>el.classList.add('show'),i*1100);
+  });
+  document.querySelectorAll('.flower').forEach((el,i)=>{
+   setTimeout(()=>el.classList.add('bloom'),9000+i*700);
+  });
+  for(let i=0;i<35;i++){
+   setTimeout(()=>{
+    const h=document.createElement('span');
+    h.className='heart';
+    h.textContent=['💗','💕','💖','🌸','💘'][i%5];
+    h.style.left=Math.random()*100+'vw';
+    h.style.fontSize=(18+Math.random()*20)+'px';
+    h.style.animationDuration=(4+Math.random()*3)+'s';
+    document.body.appendChild(h);
+    setTimeout(()=>h.remove(),8000);
+   },i*180);
+  }
+ },1200);
+}
+
+async function toggleMusic(){
+ const m=document.getElementById('music');
+ try{
+  if(m.paused)await m.play();
+  else m.pause();
+ }catch(e){
+  alert('Hãy tải tệp nhac.mp3 lên cùng thư mục với index.html nhé!');
+ }
+}
+</script>
+</body>
+</html>
