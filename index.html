@@ -2,191 +2,80 @@
 <html lang="vi">
 <head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Chúc thk mama 20/10 💗</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Chúc thk mama 20/10 💙</title>
 <style>
 *{box-sizing:border-box}
-body{
- margin:0;min-height:100vh;overflow-x:hidden;
- font-family:Arial,sans-serif;text-align:center;color:#a52d63;
- background:linear-gradient(150deg,#fff0f6,#ffd9eb,#f4dfff);
-}
-main{max-width:440px;margin:auto;padding:28px 18px 50px}
-h1{font-size:28px;line-height:1.5}
-p{line-height:1.9}
-button{
- border:0;border-radius:30px;padding:13px 22px;margin:8px;
- background:#e94f91;color:white;font-size:15px;
-}
-.scene{perspective:900px;width:min(290px,85vw);height:190px;margin:55px auto 40px}
-.envelope{
- position:relative;width:100%;height:100%;background:#ff9fc5;
- border-radius:6px;box-shadow:0 12px 30px #bb608955;
- transform-style:preserve-3d;cursor:pointer;
-}
-.flap{
- position:absolute;inset:0;background:#ffc1d8;
- clip-path:polygon(0 0,50% 58%,100% 0);
- transform-origin:top;transition:transform 1.2s;z-index:4;
-}
-.pocket{
- position:absolute;inset:0;background:#ffb4d0;
- clip-path:polygon(0 100%,0 0,50% 58%,100% 0,100% 100%);
- z-index:3;
-}
-.seal{
- position:absolute;top:55px;left:calc(50% - 23px);
- width:46px;height:46px;border-radius:50%;
- display:grid;place-items:center;background:#e63f79;
- color:white;font-size:25px;z-index:5;
-}
-.letter{
- position:absolute;left:10px;right:10px;bottom:8px;
- min-height:140px;padding:16px 10px;background:#fffafd;
- border-radius:8px;font-size:14px;line-height:1.7;
- transition:transform 1.2s;z-index:2;
-}
-.envelope.open .flap{transform:rotateX(180deg);z-index:1}
-.envelope.open .seal{opacity:0}
-.envelope.open .letter{transform:translateY(-115px);z-index:5}
-#content{display:none}
-#content.show{display:block}
-.card{
- background:#ffffffb8;border-radius:22px;padding:22px 17px;
- margin:22px 0;box-shadow:0 8px 25px #d76b9820;
-}
-.line{opacity:0;transform:translateY(18px);transition:1s;margin:17px 0}
-.line.show{opacity:1;transform:translateY(0)}
-.flower{
- display:inline-block;font-size:30px;margin:5px;
- opacity:0;transform:scale(.1) rotate(-35deg);
- transition:opacity 1s,transform 1s;
-}
-.flower.bloom{opacity:1;transform:scale(1) rotate(0)}
-.heart{
- position:fixed;bottom:-40px;pointer-events:none;
- animation:floatUp 5s linear forwards;z-index:20;
-}
-@keyframes floatUp{
- to{transform:translateY(-110vh) rotate(360deg);opacity:0}
-}
-h1{animation:glow 2s ease-in-out infinite alternate}
-@keyframes glow{
- from{text-shadow:0 0 3px #ff91bf}
- to{text-shadow:0 0 17px #ff5fa8}
-}
+body{margin:0;overflow:hidden;min-height:100vh;font-family:Arial,sans-serif;color:white;background:linear-gradient(180deg,#090e35,#28246c,#8b55a8)}
+#stars,#petals{position:fixed;inset:0;overflow:hidden;pointer-events:none}
+.star{position:absolute;width:3px;height:3px;background:white;border-radius:50%;animation:shine 2s infinite alternate}
+@keyframes shine{to{opacity:.2;transform:scale(.5)}}
+.scene{position:absolute;inset:0;display:none;align-items:center;justify-content:center;flex-direction:column;text-align:center;padding:24px 20px 35px;opacity:0;transition:opacity .8s}
+.scene.active{display:flex;opacity:1}
+h1{font-size:clamp(29px,7vw,43px);color:#ffd0f3;text-shadow:0 0 15px #f35bdc;margin:15px 0}
+p{font-size:17px;line-height:1.8;max-width:420px;margin:12px auto}
+button{padding:13px 25px;border:1px solid white;border-radius:30px;color:white;background:linear-gradient(90deg,#754dff,#ec63c5);font-size:16px;box-shadow:0 0 18px #d36aff}
+.dora{position:relative;width:125px;height:135px;margin:8px auto 15px;animation:bob 2s ease-in-out infinite}
+.head{position:absolute;top:0;left:7px;width:110px;height:105px;background:#16a8ed;border:3px solid #c7f4ff;border-radius:48% 48% 44% 44%;box-shadow:0 0 22px #3dc6ff}
+.face{position:absolute;left:17px;top:26px;width:72px;height:68px;background:#fff;border-radius:48% 48% 45% 45%}
+.eye{position:absolute;top:19px;width:13px;height:19px;background:white;border:1.5px solid #222;border-radius:50%}
+.eye:after{content:"";position:absolute;width:4px;height:8px;background:#111;border-radius:50%;left:5px;top:6px}
+.eye.left{left:22px}.eye.right{left:45px}
+.nose{position:absolute;top:38px;left:34px;width:12px;height:12px;background:#fa454d;border-radius:50%;border:1px solid #b51d2a}
+.mouth{position:absolute;left:20px;top:49px;width:33px;height:15px;border-bottom:2px solid #222;border-radius:50%}
+.whisker{position:absolute;top:49px;width:22px;height:1.5px;background:#333}
+.w1{left:-2px;transform:rotate(12deg)}.w2{left:-2px;top:57px}.w3{right:-2px;transform:rotate(-12deg)}.w4{right:-2px;top:57px}
+.bell{position:absolute;top:94px;left:50px;width:20px;height:20px;background:#ffd73e;border:2px solid #c99b00;border-radius:50%}
+.body{position:absolute;top:99px;left:32px;width:62px;height:30px;background:#129ce6;border-radius:30px 30px 20px 20px;z-index:-1}
+@keyframes bob{50%{transform:translateY(-12px) rotate(2deg)}}
+.bubble{padding:15px 18px;border:1px solid #e9c8ff;border-radius:22px;background:#211b65a8;box-shadow:0 0 18px #9c61ff;max-width:440px}
+.petal{position:absolute;top:-40px;animation:fall linear forwards}
+@keyframes fall{to{transform:translate(var(--side),110vh) rotate(760deg)}}
+.flower{position:relative;width:170px;height:220px;margin:10px auto}
+.stem{position:absolute;top:80px;left:82px;width:7px;height:140px;background:#5be08d;border-radius:10px}
+.leaf{position:absolute;top:150px;left:82px;width:55px;height:25px;background:#62e79a;border-radius:100% 0 100% 0;transform:rotate(-15deg)}
+.blossom{position:absolute;top:0;left:25px;width:120px;height:120px;animation:spin 18s linear infinite}
+@keyframes spin{to{transform:rotate(360deg)}}
+.fp{position:absolute;top:4px;left:41px;width:38px;height:65px;border-radius:50%;transform-origin:50% 56px;background:linear-gradient(#ffe0f8,#ff75c7,#e62e88);box-shadow:0 0 12px #ff8ada}
+.fc{position:absolute;left:42px;top:42px;width:36px;height:36px;border-radius:50%;background:radial-gradient(#fff7a0,#ffbb32,#ff8b20)}
+.small{font-size:13px;opacity:.8}
 </style>
 </head>
 <body>
-<main>
-<h1>💗 Chúc thk mama 💗</h1>
-<p>Một món quà nhỏ dành riêng cho mama 🌷</p>
-<p>Hôm nay có một điều dễ thương muốn gửi đến mama...</p>
-
-<div class="scene">
- <div class="envelope" id="envelope" onclick="openLetter()">
-  <div class="flap"></div>
-  <div class="letter">
-   <strong>💌 Gửi mama</strong><br>
-   Có một lời chúc bí mật ở bên trong nè!
-  </div>
-  <div class="pocket"></div>
-  <div class="seal">♥</div>
- </div>
-</div>
-
-<p id="hint">👆 Chạm vào phong bì để mở thư nha!</p>
-<button onclick="openLetter()">💌 Mở thư</button>
-<button onclick="toggleMusic()">🎵 Bật / tắt nhạc</button>
-
-<audio id="music" loop preload="none">
- <source src="nhac.mp3" type="audio/mpeg">
-</audio>
-
-<div id="content">
- <div class="card">
-  <h2 class="line">🌸 Chúc thk mama 20/10 🌸</h2>
-  <p class="line">Hê lu mamaaa 💗 Hôm nay là ngày 20/10 nên tui có chút lời chúc muốn gửi đến mama nè.</p>
-  <p class="line">Chúc mama luôn xinh đẹp, đáng yêu, lúc nào cũng vui vẻ và cười thật nhiều nhaaa 🥹💕</p>
-  <p class="line">Mong mọi chuyện tốt đẹp sẽ đến với mama. Những điều làm mama buồn thì mau chóng qua đi, còn niềm vui thì ở lại thật lâu nhé.</p>
-  <p class="line">Chúc mama học tập thật tốt, luôn tự tin và đạt được những điều mình mong muốn ✨</p>
-  <p class="line">Nếu có ngày nào mệt mỏi thì nhớ nghỉ ngơi, ăn uống đầy đủ và đừng suy nghĩ nhiều quá nha.</p>
-  <p class="line">Mong mỗi ngày của mama đều có lý do để mỉm cười, có người quan tâm và có thật nhiều điều dễ thương 💖</p>
-  <p class="line">Chúc thk mama có một ngày 20/10 thật vui, nhận được nhiều quà, nhiều lời chúc và luôn hạnh phúc nhaaa 🌷</p>
-  <h2 class="line">Happy Women's Day, mamaaa! 💗🎀</h2>
- </div>
-
- <div class="card">
-  <h2 class="line">🌷 Vườn hoa dành cho mama 🌷</h2>
-  <p class="line">Hoa sẽ nở từng bông một nha, đợi xíu nè...</p>
-  <div>
-   <span class="flower">🌷</span>
-   <span class="flower">🌸</span>
-   <span class="flower">🌹</span>
-   <span class="flower">🌼</span>
-   <span class="flower">💐</span>
-   <span class="flower">🌺</span>
-   <span class="flower">🌻</span>
-   <span class="flower">🪻</span>
-  </div>
-  <p class="line">Mỗi bông hoa là một lời chúc vui vẻ, may mắn, bình an và hạnh phúc 💕</p>
- </div>
-
- <div class="card">
-  <h2 class="line">💌 Một lời nhắn cuối</h2>
-  <p class="line">Mong rằng khi đọc đến đây, mama sẽ mỉm cười một chút. Vậy là món quà nhỏ này có ý nghĩa rồi đó 💗</p>
-  <h2 class="line">🎀 20/10 vui vẻ nha mama 🎀</h2>
-  <p class="line">Gửi thật nhiều hoa và những điều tốt đẹp đến mama 🌸💖</p>
- </div>
-</div>
-
-<p style="font-size:12px">Made with love 💗 · 20.10</p>
-</main>
-
+<div id="stars"></div><div id="petals"></div>
+<section class="scene active" id="s0">
+ <div class="dora"><div class="head"><div class="face"><i class="eye left"></i><i class="eye right"></i><i class="nose"></i><i class="mouth"></i><i class="whisker w1"></i><i class="whisker w2"></i><i class="whisker w3"></i><i class="whisker w4"></i></div></div><div class="bell"></div><div class="body"></div></div>
+ <h1>Chúc thk mama 💙</h1><p>🎁 Một món quà nhỏ dành riêng cho bạn nhân ngày 20/10.</p>
+ <button onclick="begin()">💌 Mở món quà</button><p class="small">Hãy bật âm lượng để nghe lời chúc nhé!</p>
+</section>
+<section class="scene" id="s1"><div class="dora"><div class="head"><div class="face"><i class="eye left"></i><i class="eye right"></i><i class="nose"></i><i class="mouth"></i><i class="whisker w1"></i><i class="whisker w2"></i><i class="whisker w3"></i><i class="whisker w4"></i></div></div><div class="bell"></div><div class="body"></div></div><div class="bubble"><h1>Xin chào!</h1><p>Hôm nay mình có một món quà nhỏ muốn gửi đến bạn. Chúc bạn có một ngày 20/10 thật vui vẻ, nhận được nhiều lời chúc tốt đẹp và luôn giữ nụ cười trên môi.</p></div></section>
+<section class="scene" id="s2"><div style="font-size:65px">🌙✨🌠</div><h1>Một ngày thật vui</h1><div class="bubble"><p>Ngày 20/10 là dịp để gửi những lời chúc tốt đẹp đến các bạn nữ. Mong rằng hôm nay của bạn sẽ có thật nhiều niềm vui, những điều bất ngờ dễ thương và những kỷ niệm đáng nhớ cùng bạn bè.</p></div></section>
+<section class="scene" id="s3"><div class="dora"><div class="head"><div class="face"><i class="eye left"></i><i class="eye right"></i><i class="nose"></i><i class="mouth"></i><i class="whisker w1"></i><i class="whisker w2"></i><i class="whisker w3"></i><i class="whisker w4"></i></div></div><div class="bell"></div><div class="body"></div></div><h1>Chúc bạn luôn vui vẻ</h1><div class="bubble"><p>Chúc bạn mỗi ngày đều có nhiều tiếng cười, luôn lạc quan và tự tin vào bản thân. Dù gặp chuyện vui hay đôi lúc có khó khăn, mong bạn vẫn giữ tinh thần tích cực và tìm được cách giải quyết mọi việc thật tốt.</p></div></section>
+<section class="scene" id="s4"><div style="font-size:65px">📚⭐🎒</div><h1>Học tập thật tốt nhé!</h1><div class="bubble"><p>Chúc bạn học tập ngày càng tiến bộ, hiểu bài nhanh hơn, làm bài kiểm tra thật tốt và đạt được những kết quả như mong muốn. Mong những ngày đến trường luôn có nhiều điều thú vị, có bạn bè cùng học tập và cùng tạo nên nhiều kỷ niệm đẹp.</p></div></section>
+<section class="scene" id="s5"><div style="font-size:65px">🍀🌈✨</div><h1>Những điều tốt đẹp</h1><div class="bubble"><p>Mong bạn luôn gặp nhiều may mắn, làm gì cũng thuận lợi và có đủ tự tin để thử sức với những điều mới. Hãy luôn là chính mình, phát huy những điểm tốt và đừng ngại cố gắng để trở thành phiên bản tốt hơn mỗi ngày.</p></div></section>
+<section class="scene" id="s6"><div style="font-size:62px">🌸🌷🌼</div><h1>Món quà cuối cùng</h1><div class="bubble"><p>Một bông hoa nhỏ thay cho lời chúc chân thành. Mong rằng cuộc sống của bạn sẽ luôn có nhiều màu sắc tươi đẹp, giống như một khu vườn đầy hoa. Chúc bạn luôn khỏe mạnh, vui vẻ, bình an và có thật nhiều điều đáng nhớ trong thời gian tới.</p></div></section>
+<section class="scene" id="s7"><div class="flower"><div class="stem"></div><div class="leaf"></div><div class="blossom" id="blossom"></div></div><h1>🌸 Tặng bạn một bông hoa 🌸</h1><p>Mong những điều tốt đẹp nhất sẽ đến với bạn!</p></section>
+<section class="scene" id="s8"><div style="font-size:75px">🌸🌺🌷🌼</div><h1>Chúc thk mama 20/10 vui vẻ!</h1><div class="bubble"><p>Chúc bạn luôn vui vẻ, mạnh khỏe, học tập tốt và gặp nhiều may mắn. Mong bạn có một ngày 20/10 thật đáng nhớ, luôn giữ nụ cười tươi và có thêm nhiều niềm vui trong cuộc sống. Chúc mừng ngày 20/10! 🎉</p></div><button onclick="replay()">💗 Xem lại từ đầu</button></section>
 <script>
-let opened=false;
-
-function openLetter(){
- if(opened)return;
- opened=true;
- document.getElementById('envelope').classList.add('open');
- document.getElementById('hint').textContent=
-  '💖 Thư đang mở ra, đợi một chút nha mama...';
-
- setTimeout(()=>{
-  document.getElementById('content').classList.add('show');
-  document.getElementById('hint').textContent=
-   '🌸 Những lời chúc sẽ xuất hiện lần lượt nha!';
-  document.querySelectorAll('.line').forEach((el,i)=>{
-   setTimeout(()=>el.classList.add('show'),i*1100);
-  });
-  document.querySelectorAll('.flower').forEach((el,i)=>{
-   setTimeout(()=>el.classList.add('bloom'),9000+i*700);
-  });
-  for(let i=0;i<35;i++){
-   setTimeout(()=>{
-    const h=document.createElement('span');
-    h.className='heart';
-    h.textContent=['💗','💕','💖','🌸','💘'][i%5];
-    h.style.left=Math.random()*100+'vw';
-    h.style.fontSize=(18+Math.random()*20)+'px';
-    h.style.animationDuration=(4+Math.random()*3)+'s';
-    document.body.appendChild(h);
-    setTimeout(()=>h.remove(),8000);
-   },i*180);
-  }
- },1200);
-}
-
-async function toggleMusic(){
- const m=document.getElementById('music');
- try{
-  if(m.paused)await m.play();
-  else m.pause();
- }catch(e){
-  alert('Hãy tải tệp nhac.mp3 lên cùng thư mục với index.html nhé!');
- }
-}
+const scenes=[...document.querySelectorAll('.scene')];let index=0,started=false,runId=0;
+const words=[
+"Hôm nay mình có một món quà nhỏ muốn gửi đến bạn. Chúc bạn có một ngày 20 tháng 10 thật vui vẻ, nhận được nhiều lời chúc tốt đẹp và luôn giữ nụ cười trên môi.",
+"Ngày 20 tháng 10 là dịp để gửi những lời chúc tốt đẹp đến các bạn nữ. Mong hôm nay của bạn sẽ có thật nhiều niềm vui, những điều bất ngờ dễ thương và những kỷ niệm đáng nhớ cùng bạn bè.",
+"Chúc bạn mỗi ngày đều có nhiều tiếng cười, luôn lạc quan và tự tin vào bản thân. Dù gặp chuyện vui hay đôi lúc có khó khăn, mong bạn vẫn giữ tinh thần tích cực và tìm được cách giải quyết mọi việc thật tốt.",
+"Chúc bạn học tập ngày càng tiến bộ, hiểu bài nhanh hơn, làm bài kiểm tra thật tốt và đạt được những kết quả như mong muốn. Mong những ngày đến trường luôn có nhiều điều thú vị, có bạn bè cùng học tập và cùng tạo nên nhiều kỷ niệm đẹp.",
+"Mong bạn luôn gặp nhiều may mắn, làm gì cũng thuận lợi và có đủ tự tin để thử sức với những điều mới. Hãy luôn là chính mình, phát huy những điểm tốt và đừng ngại cố gắng để trở thành phiên bản tốt hơn mỗi ngày.",
+"Một bông hoa nhỏ thay cho lời chúc chân thành. Mong rằng cuộc sống của bạn sẽ luôn có nhiều màu sắc tươi đẹp, giống như một khu vườn đầy hoa. Chúc bạn luôn khỏe mạnh, vui vẻ, bình an và có thật nhiều điều đáng nhớ trong thời gian tới.",
+"Chúc thk mama ngày 20 tháng 10 vui vẻ! Chúc bạn luôn vui vẻ, mạnh khỏe, học tập tốt và gặp nhiều may mắn. Mong bạn có một ngày thật đáng nhớ và có thêm nhiều niềm vui trong cuộc sống."
+];
+function makeStars(){const sky=document.getElementById('stars');for(let i=0;i<115;i++){const el=document.createElement('i');el.className='star';el.style.left=Math.random()*100+'%';el.style.top=Math.random()*100+'%';el.style.animationDelay=Math.random()*3+'s';sky.appendChild(el)}}
+function makeFlower(){const box=document.getElementById('blossom');for(let i=0;i<8;i++){const p=document.createElement('i');p.className='fp';p.style.transform=`rotate(${i*45}deg)`;box.appendChild(p)}const c=document.createElement('i');c.className='fc';box.appendChild(c)}
+function show(n){scenes.forEach((el,i)=>el.classList.toggle('active',i===n));index=n}
+function say(text){return new Promise(resolve=>{if(!('speechSynthesis'in window)){setTimeout(resolve,6000);return}speechSynthesis.cancel();const u=new SpeechSynthesisUtterance(text);u.lang='vi-VN';u.rate=.94;u.pitch=1.05;u.onend=resolve;u.onerror=resolve;speechSynthesis.speak(u)})}
+function wait(ms){return new Promise(r=>setTimeout(r,ms))}
+async function begin(){if(started)return;started=true;const id=++runId;document.querySelector('#s0 button').disabled=true;for(let n=1;n<=8;n++){if(id!==runId)return;show(n);if(n===7)makePetals(130);if(n===8)makePetals(260);if(n>=1&&n<=6){await say(words[n-1]);await wait(900)}else if(n===7){await wait(3500);await say(words[6]);await wait(800)}else{await wait(800)}}}
+function makePetals(count){const area=document.getElementById('petals');for(let i=0;i<count;i++){const p=document.createElement('span');p.className='petal';p.textContent=['🌸','🌷','🌺','🌼','💗'][Math.floor(Math.random()*5)];p.style.left=Math.random()*100+'%';p.style.fontSize=(14+Math.random()*23)+'px';p.style.animationDuration=(4+Math.random()*7)+'s';p.style.animationDelay=(Math.random()*3)+'s';p.style.setProperty('--side',(Math.random()*240-120)+'px');area.appendChild(p);setTimeout(()=>p.remove(),15000)}}
+function replay(){runId++;if('speechSynthesis'in window)speechSynthesis.cancel();document.getElementById('petals').innerHTML='';started=false;document.querySelector('#s0 button').disabled=false;show(0)}
+makeStars();makeFlower();
 </script>
 </body>
 </html>
